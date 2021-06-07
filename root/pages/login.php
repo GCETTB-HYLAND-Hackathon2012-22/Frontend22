@@ -15,7 +15,7 @@
 			<input type="text" name="username" >
 		</div>
 		<div class="input-group">
-			<label for="first_name">Password:</label>
+			<label for="password">Password:</label>
 			<input type="password" name="password" >
 </div>
 		<div class="input-group">
@@ -41,7 +41,7 @@ $headers = array(
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 $username=$_REQUEST['username'];
 $password=$_REQUEST['password'];
-echo $username."<br>".$password;
+// echo $username."<br>".$password;
 $data = "username=$username&password=$password&grant_type=password";
 
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
