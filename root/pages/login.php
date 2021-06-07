@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Registration</title>
-	<link rel="stylesheet" type="text/css" href="./../css/reg.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -21,6 +21,9 @@
 		<div class="input-group">
 		<button class="btn" type="submit" name="log_user">Submit</button>
 </div>
+<label>
+          new user? <strong><a href="registration.php">create your account</a></strong>
+      </label>
 	</form>
 <?php
 if (isset($_POST["log_user"])) {
