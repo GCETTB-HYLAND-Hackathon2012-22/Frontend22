@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Log In</title>
+	<link rel="stylesheet" type="text/css" href="./../css/reg.css">
 </head>
 <body>
 
 	<div class="header">
-		<h2 style="text-align: center;">Register</h2>
+		<h2 style="text-align: center;">Log In</h2>
 	</div>
 	<form action="" method="POST">
 		<div class="input-group">
@@ -15,7 +15,7 @@
 			<input type="text" name="username" >
 		</div>
 		<div class="input-group">
-			<label for="first_name">First Name :</label>
+			<label for="first_name">Password:</label>
 			<input type="password" name="password" >
 </div>
 		<div class="input-group">
