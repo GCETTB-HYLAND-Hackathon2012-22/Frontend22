@@ -39,7 +39,7 @@
         
         <div class="input-group">
 			<label for="contact">Contact No :</label>
-			<input type="text" name="contact">
+			<input type="text" pattern="[1-9]{1}[0-9]{9}" maxlength= 10 title="Only 10 digit numeric characters are allowed, starting with non zero" name="contact">
 		</div>
         <div class="input-group">
 			<label for="password">Enter Password :</label>
