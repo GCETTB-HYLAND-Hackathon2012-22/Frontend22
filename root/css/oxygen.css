@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+:root {
+  --color-1: #21d4fd;
+  --color-2: #b721ff;
+  --color-3: #faff75;
+  --color-4: #2af598;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  display : inline-block;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;
+margin-left : 2%;
+margin-right : 2%;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.Button {
+  padding: 1rem 1.5rem;
+  border: 0;
+  color: var(--color-3);
+  font-size: 1rem;
+  font-weight: bold;
+  background: #949996;
+  border-radius: 1px;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: 0 1.25rem 1.5rem -0.2rem rgba(50,0,100,0.15);
+}
+.Button:hover {
+  color: var(--color-4);
+  box-shadow: 0 1.75rem 3rem 0rem rgba(50,0,100,0.1);
+  transform: scale(1.05);
+}
+.Button:active {
+  box-shadow: 0 1.75rem 2.5rem -0.2rem rgba(50,0,100,0.125);
+  transform: scale(1.025);
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #bfd8ff;
+}
+
+.gap{
+	width : 100%;
+	display : inline-block;
+}
+
+
+.avl .yes {
+	color : #38d400;
+}
+
+.avl .no {
+	color : red;
+}
+
+.avl b{
+	color : blue;
+}
+
+
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}

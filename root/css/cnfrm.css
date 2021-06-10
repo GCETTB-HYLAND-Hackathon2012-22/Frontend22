@@ -1,0 +1,47 @@
+
+body{
+	background-color : #03f8fc;
+}
+
+span {
+	margin-left : 5%;
+}
+
+div{
+	margin-top : 5%;
+	text-align : center;
+
+}
+
+
+span a:link, a:visited {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+span a:hover, a:active {
+  background-color: grey;
+}
+
+a{
+	text-decoration : none;
+}
+
+b a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+b a:hover, a:active {
+  background-color: green;
+  color: white;
+}

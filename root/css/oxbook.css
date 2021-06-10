@@ -8,8 +8,8 @@ body {
 }
 
 .header {
-    width: 30%;
-    margin: 50px auto 0px;
+    width: 37.6%;
+    margin: 5% auto 0px;
     color: white;
     background: #5F9EA0;
     text-align: center;
@@ -18,17 +18,58 @@ body {
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
 }
+
 form {
     width: 30%;
     margin: 0px auto;
-    padding: 20px;
-    border: 1px solid #B0C4DE;
+    padding: 5%;
+    border: 2px solid #B0C4DE;
     background: white;
     border-radius: 0px 0px 10px 10px;
 }
-.input-group{
-    margin: 10px 0px 10px 0px;
+
+.btn{
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: blue;
+    border-radius: 5px;
 }
+
+.hz{
+	margin-bottom : 20px;
+}
+
+.hz .opt{
+	display : inline-block;
+	margin-left : 15px;
+}
+
+/* .hz label{
+	margin-left : 10px;
+} */
+
+.form-group{
+	margin-bottom : 20px;
+	margin-top : 20px;
+}
+
+.chk{
+	margin-top : 10px;
+}
+
+#upp{
+	margin-top : 10px;
+}
+
+.input-group{
+    margin: 20px 0px 20px 0px;
+}
+
+.input-group .ggg{
+	margin-top : 10px;
+}
+
 .input-group label{
     display: block;
     text-align: left;
@@ -43,7 +84,6 @@ form {
     border: 1px solid gray;
 }
 .btn{
-    margin-left : 83% ;
     padding: 10px;
     font-size: 15px;
     color: white;
@@ -62,9 +102,14 @@ form {
     text-align: left;
 }
 
-a{
+label a{
 	margin-left : 3%;
 	text-decoration : none;
+}
+
+.hz label{
+	display: inline;
+    font: 1rem 'Fira Sans', sans-serif;
 }
 
 label {

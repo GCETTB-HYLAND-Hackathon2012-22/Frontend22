@@ -1,9 +1,65 @@
 /*____________________Global_______________________*/
+
+
+
 body{
 	font-size : 16px;
 	Line-height : 1.5;
 	overflow-x : hidden;
+	background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
+
+img{
+	
+	position:relative;
+	width : 65px;
+	height : 65px;
+}
+
+#NM{
+	margin-top :0.5%;
+	position:relative;
+	width : 175px;
+	height : 50px;
+}
+
+
+
+
+
+.searchTerm {
+  margin : 0;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+
 
 
 
@@ -28,15 +84,27 @@ ul{
 	padding : 0;
 }
 
-img{
-	vertical-align : middle;
-	max-width : 100%;
-}
 
 .container{
-	max-width : 1140px;
-	/* background-color : red; */
+	max-width : 1140px; 
 	margin : auto;
+	
+}
+
+.container2 {
+	padding:0;
+	max-width : 90%;
+	margin-top:1.5%;
+	margin-left:40%;
+}
+
+
+
+.container3{
+	padding-right:0;
+	max-width : 90%; 
+	margin-top:1.5%;
+	margin-left:20%;
 }
 
 .row{
@@ -45,6 +113,7 @@ img{
 }
 
 .jcb{
+	
 	justify-content : space-between;
 }
 
@@ -63,13 +132,11 @@ img{
 .header .logo a{
 	display : inline-block;
 	text-align : center;
-	Line-height : 41px;
-	height : 45px;
-	width : 45px;
+	Line-height : 51px;
+	height : 65px;
+	width : 65px;
 	font-size : 24px;
-	color: yellow;
 	border-radius : 60%;
-	border:3px solid yellow;
 }
 
 .header .hbtn{
@@ -79,6 +146,7 @@ img{
 }
 
 
+/*_____________Log Out  Button___________*/
 
 
 
