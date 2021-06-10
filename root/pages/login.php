@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +19,7 @@
 			<input type="text" name="username" >
 		</div>
 		<div class="input-group">
-			<label for="password">Password:</label>
+			<label for="password">Password :</label>
 			<input type="password" name="password" >
 </div>
 		<div class="input-group">
@@ -27,7 +31,7 @@
 	</form>
 <?php
 if (isset($_POST["log_user"])) {
-session_start();
+	
 $url = "https://gcettbiaans22.herokuapp.com/api/auth";
 
 $curl = curl_init($url);
@@ -51,8 +55,17 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 // var_dump($resp);
-$_SESSION['code']=$resp;
-header('location:index.php');
+$obj=json_decode($resp);
+$_SESSION['code']=$obj;
+foreach($obj as $key=>$value){
+	if($key=='detail'){
+		echo "<br><h3><p align='center'>".$obj->detail."</p></h3>";
+	}
+	else{
+		echo "<script>location.href = "."'index2.php';</script>";
+	}
+}
+
 }
 ?>
 </body>

@@ -2,12 +2,12 @@
 session_start();
 $code= $_SESSION['code'];
 // echo $code;
-$temp="";
-for($i=1;$i<=125;$i++){
-    $temp.=$code[$i+16];
-}
+// $temp="";
+// for($i=1;$i<=125;$i++){
+//     $temp.=$code[$i+16];
+// }
 //  echo $temp."<br>" ;
-
+$result=$code->access_token;
 $url = "https://gcettbiaans22.herokuapp.com/api/users/me";
 
  
@@ -17,7 +17,7 @@ curl_setopt($curl, CURLOPT_URL, $url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 $headers = array(
-   "Authorization: Bearer ".$temp,
+   "Authorization: Bearer ".$result,
    "Accept: application/json"
 );
 // $headers=array($code);
@@ -33,8 +33,8 @@ curl_close($curl);
 $obj=json_decode($resp);
 $username=$obj->user_id;
 $name=$obj->first_name." ".$obj->last_name;
-echo "Welcome ". $name;
-
+// echo "Welcome ". $name;
+$_SESSION['user_name']=$name;
  
 
 ?>

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Home</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
+	
+	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<title>Registration</title>
 	<link rel="stylesheet" type="text/css" href="./../css/reg.css">
 </head>
@@ -46,8 +57,9 @@
 			<input type="password" name="password">
 		</div>
 		<div class="input-group">
-		<button class="btn" type="submit" name="reg_user">Submit</button>
-</div>
+		    <button class="btn" type="submit" name="reg_user">Submit</button>
+        </div>
+         <p>Already have an account? <a href="login.php">Login here</a>.</p>
 	</form>
     <?php
     if (isset($_POST["reg_user"])) {
@@ -106,8 +118,9 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-var_dump($resp);
+// var_dump($resp);
 
+	echo "<script>location.href = "."'confrm.php';</script>";
 }
 
 ?>

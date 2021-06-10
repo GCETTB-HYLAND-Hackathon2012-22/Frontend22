@@ -10,12 +10,13 @@
 	<link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
 	
 	<!-- CSS -->>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./../css/preloader.css">
 	<link rel="stylesheet" href="./../css/menu.css">
 	<link rel="stylesheet" href="./../css/style.css">
-
+	<link rel="stylesheet" href="./../css/oxygen.css">
 </head>
 
 <body>
@@ -49,8 +50,19 @@
 		<div class="container">
 			<div class="row jcb">
 				<div class="logo">
-					<a href="./../index.html">SW</a>
+					<a href="./../index.html"><img src='./../data/logo.png'></a>
+					<a href="./../index.html"><img id="NM" src='./../data/miracurol.png'></a>
 				</div>
+				
+					<div class="container2">
+					<input type="text" class="searchTerm" placeholder="What are you looking?">
+					<button type="submit" class="searchButton">
+						<i class="fa fa-search"></i>
+					</button>
+					</div>
+				
+				
+				
 				<input type="checkbox" id="active">
 		<label for="active" class="menu-btn"><span></span></label>
 		<label for="active" class="close"></label>
@@ -63,6 +75,7 @@
 			</a>
 				<ul class="srv-show">
 					<li><a href="./appointment.html">Appointment</a></li>
+					<li><a href="./test.php">Predictor</li>
 					<li><a href="./oxygen.html">Oxygen</a></li>
 					<li><a href="./vaccine.html">Vaccination</a></li>
 					<li><a href="./medicine.html">Medicine</a></li>
