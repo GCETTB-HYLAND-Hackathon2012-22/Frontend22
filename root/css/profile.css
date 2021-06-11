@@ -122,6 +122,7 @@ button:hover, a:hover {
 
 .cc2 .about-tabs .tab-item.active {
 	color : var(--skin-color);
+	background-color : #dfe2ed;
 }
 
 .cc2 .tab-content{
