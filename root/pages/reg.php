@@ -23,38 +23,38 @@
 	<form action="" method="POST">
 		<div class="input-group">
 			<label for="username">Username :</label>
-			<input type="text" name="username" >
+			<input type="text" name="username" required>
 		</div>
 		<div class="input-group">
 			<label for="first_name">First Name :</label>
-			<input type="text" name="first_name" >
+			<input type="text" name="first_name" required>
 		</div>
 		<div class="input-group">
 			<label for="last_name">Last Name :</label>
-			<input type="text" name="last_name">
+			<input type="text" name="last_name" required>
 		</div>
 		<div class="input-group">
 			<label for="email">Email Id :</label>
-			<input type="email" name="email">
+			<input type="email" name="email" required>
 		</div>
         <div class="input-group">
 			<label for="start">Date of Birth :</label>
 <input type="date" id="start" name="date"
        value=""
-       min="1921-01-01" max="2021-01-01">
+       min="1921-01-01" max="2021-01-01" required>
 		</div>
         <div class="input-group">
 			<label for="pin">PIN Code :</label>
-			<input type="text" name="pin">
+			<input type="text" maxlength= 6 name="pin" required>
 		</div>
         
         <div class="input-group">
 			<label for="contact">Contact No :</label>
-			<input type="text" pattern="[1-9]{1}[0-9]{9}" maxlength= 10 title="Only 10 digit numeric characters are allowed, starting with non zero" name="contact">
+			<input type="text" pattern="[1-9]{1}[0-9]{9}" maxlength= 10 title="Only 10 digit numeric characters are allowed, starting with non zero" name="contact" required>
 		</div>
         <div class="input-group">
 			<label for="password">Enter Password :</label>
-			<input type="password" name="password">
+			<input type="password" name="password" required>
 		</div>
 		<div class="input-group">
 		    <button class="btn" type="submit" name="reg_user">Submit</button>

@@ -4,6 +4,7 @@ session_start();
 <!doctype html>
 <html lang="en">
   <head>
+      <link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -81,7 +82,8 @@ session_start();
 
  
         
-$url = "https://gcettbiaans22.herokuapp.com/api/covi_checker";
+// $url = "https://gcettbiaans22.herokuapp.com/api/covi_checker";
+$url='https://gcettbiaans22.herokuapp.com/api/medi_checker';
 
  
 
@@ -134,7 +136,7 @@ $resp = curl_exec($curl);
 curl_close($curl);
 // var_dump($resp);
 $obj=json_decode($resp);
-$result=$obj->result;
+$result=$obj->Covid;
 
 // echo $patient."<br>".$result;
 $_SESSION['name']=$patient;

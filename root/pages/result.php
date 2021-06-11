@@ -5,6 +5,7 @@ session_start();
 <!DOCTYPE html >
 <html lang="en">
   <head>
+      <link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,7 +58,21 @@ echo "'>";
         
         $patient=$_SESSION['name'];
         $result=$_SESSION['res'];
-            echo "<p><h3 style='text-align: center;margin-top: 100px;'>".$patient."'s covid possibility is ".round($result*100,2)."%</h3>
+        $t =round($result*100,2);
+        $bg = "";
+        if ($t < 26) {
+          $bg = "#0af531";
+        } elseif ($t < 51) {
+          $bg = "#f1f50a";
+        } elseif ($t < 76) {
+            $bg = "#f5930a";
+        } else {
+          $bg = "#f5450a";
+        }
+        
+        
+        
+            echo "<p><h3 style='text-align: center;margin-top: 100px;'>".$patient."'s covid possibility is ".round($result*100,2)." %</h3>
         </p>
         <div class='skill-bars' style='margin : auto'>
       <div class='bar'>
@@ -65,7 +80,8 @@ echo "'>";
           <span>Possibility of Covid Infection : </span>
         </div>
         <div class='progress-line html'>
-          <span style='width :".round($result*100,2).";::after {content: '".round($result*100,2)."%';}'></span>
+        <style>span::after{ content: '".$t."%';}</style>
+          <span style='width :".$t."%;background:".$bg."'></span>
         </div>
       </div>
 	</div>

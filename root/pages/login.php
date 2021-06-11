@@ -16,11 +16,11 @@ session_start();
 	<form action="" method="POST">
 		<div class="input-group">
 			<label for="username">Username :</label>
-			<input type="text" name="username" >
+			<input type="text" name="username" required>
 		</div>
 		<div class="input-group">
 			<label for="password">Password :</label>
-			<input type="password" name="password" >
+			<input type="password" name="password" requied>
 </div>
 		<div class="input-group">
 		<button class="btn" type="submit" name="log_user">Submit</button>

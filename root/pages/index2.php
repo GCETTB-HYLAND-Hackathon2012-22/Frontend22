@@ -98,12 +98,12 @@ include("index.php");
 							<span class="fas fa-caret-down"></span>
 						</a>
 							<ul class="srv-show">
-								<li><a href="./appointment.html">Appointment</a></li>
-								<li><a href="./test.php">Predictor</a></li>
-								<li><a href="./oxygen.html">Oxygen</a></li>
-								<li><a href="./vaccine.html">Vaccination</a></li>
-								<li><a href="./medicine.html">Medicine</a></li>
-								<li><a href="./ambulance.html">Ambulance</a></li>
+					<li><a href="./appointment.html">Book an Appointment With Doctor</a></li>
+					<li><a href="./test.php">Predict Disease</li>
+					<li><a href="./oxygen.html">Book Oxygen</a></li>
+					<li><a href="./vaccine.html">Get Vaccinated</a></li>
+					<li><a href="./medicine.html">Order Medicine</a></li>
+					<li><a href="./ambulance.html">Call Ambulance</a></li>
 							</ul>
 						</li>
 							<li><a href="./social.html">Social</a></li>
