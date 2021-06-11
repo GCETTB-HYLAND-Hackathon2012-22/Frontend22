@@ -20,7 +20,9 @@ session_start();
   
   <?php
 $t =round($_SESSION['res']*100,2);
-
+$bac=$_SESSION['bacteria'];
+$cov=$_SESSION['covid'];
+$vir=$_SESSION['viral'];
 if ($t < 26) {
   echo "#0af531";
 } elseif ($t < 51) {
@@ -72,8 +74,11 @@ echo "'>";
         
         
         
-            echo "<p><h3 style='text-align: center;margin-top: 100px;'>".$patient."'s covid possibility is ".round($result*100,2)." %</h3>
+            echo "<p><h3 style='text-align: center;margin-top: 100px;'>".$patient."'s covid possibility is ".round($result*100,2)."<br> %</h3>
+            
         </p>
+    Bacteria Pneumonia= $bac<br>Covid= $cov <br>Viral Pneumonia= $vir
+        
         <div class='skill-bars' style='margin : auto'>
       <div class='bar'>
         <div class='info' style='margin-bottom:5%'>
