@@ -1,0 +1,140 @@
+:root{
+	--outer-shadow : 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+	--outer-shadow-0 : 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+	--inner-shadow : inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+	--text-black-600 : #666666;
+	--skin-color : #fb839e;
+}
+
+@keyframes fadeInTop{
+	0%{
+		opacity : 0;
+		transform : translateY(-25px);
+		
+	}
+	100%{
+		opacity : 1;
+		transform : translateY(0px);
+		
+	}
+}
+
+
+.card {
+  margin : auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: red;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.5;
+}
+
+.cc1{
+	margin-top : 25vh;
+}
+
+
+.outer-shadow {
+	box-shadow : var(--outer-shadow);
+}
+
+.hover-in-shadow {
+	position : relative;
+	z-index : 1;
+}
+
+.hover-in-shadow:hover {
+	box-shadow : var(--outer-shadow-0);
+}
+
+.hover-in-shadow:after {
+	content:"";
+	position: absolute;
+	top:0;
+	left:0;
+	width : 100%;
+	height:100%;
+	transition: all 0.3s ease;
+}
+
+.hover-in-shadow:hover:after {
+	box-shadow : var(--inner-shadow-0);
+}
+
+.cc2 .about-tabs{
+	padding : 60px 15px 50px;
+	flex : 0 0 100%;
+	max-width : 100%;	
+	text-align : center;
+}
+
+.cc2{
+	padding : 40px 0 0;
+	min-height : 50vh;
+}
+
+.cc2 .about-tabs .tab-item {
+	display : inline-block;
+	margin : 0 5px 10px;
+	border : 1px solid #ec9412;
+	cursor : pointer;
+	padding : 5px 10px;
+	border-radius : 30px;
+	transition: all 0.3s ease;
+	font-size : 16px;
+	color : var(--text-black-600);
+	font-weight : 500;
+	text-transform : capitalize;
+}
+
+.cc2 .about-tabs .tab-item:hover:not(.active) {
+	opacity : 0.6;
+}
+
+.cc2 .about-tabs .tab-item.active {
+	color : var(--skin-color);
+}
+
+.cc2 .tab-content{
+	flex : 0 0 100%;
+	max-width : 100%;	
+	display : none;
+}
+
+.cc2 .tab-content.active {
+	display : block;
+	animation : fadeInTop 0.5s ease;
+}
+
+.ids{
+	background-color : red;
+}
