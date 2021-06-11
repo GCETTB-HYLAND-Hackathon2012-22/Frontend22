@@ -21,6 +21,8 @@
 		<h2 style="text-align: center;">Register</h2>
 	</div>
 	<form action="" method="POST">
+	    <input type="hidden" name="longitude" id="getlon" />
+            <input type="hidden" name="latitude" id="getlat" />
 		<div class="input-group">
 			<label for="username">Username :</label>
 			<input type="text" name="username" required>
@@ -61,6 +63,37 @@
         </div>
          <p>Already have an account? <a href="login.php">Login here</a>.</p>
 	</form>
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    pageLoad();
+});
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, positionError);
+    }
+}
+
+function showPosition(position) {
+    console.log(position);
+    document.getElementById('getlat').value = position.coords.latitude;
+    document.getElementById('getlon').value = position.coords.longitude;
+    lon = document.getElementById('getlon').value;
+    lat = document.getElementById('getlat').value;
+
+    document.frm1.submit(); // here the form is submit
+}
+
+function positionError(error) {
+    if (error.PERMISSION_DENIED) alert('Please accept geolocation');
+    hideLoadingDiv();
+    showError('Geolocation is not enabled. Please enable to use this feature');
+}
+
+function pageLoad() {
+    getLocation();
+}
+        </script>
     <?php
     if (isset($_POST["reg_user"])) {
 
@@ -91,6 +124,8 @@ $date=$_REQUEST['date'];
 $pin= $_REQUEST['pin'];
 $contact= $_REQUEST['contact'];
 $password=$_REQUEST['password'];
+$lon=$_REQUEST['longitude'];
+$lat=$_REQUEST['latitude'];
 $data = <<<DATA
 {
   "user_id": "$username",
@@ -100,7 +135,9 @@ $data = <<<DATA
   "dob": "$date",
   "pin": $pin,
   "contact_no":$contact,
-  "password": "$password"
+  "password": "$password",
+  "latitude" : $lat,
+  "longitude": $lon
 }
 DATA;
 
