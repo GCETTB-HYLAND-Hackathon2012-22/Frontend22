@@ -20,19 +20,59 @@ body{
     width: 30px
 }
 
+
+.social a {
+	margin-right : 8%;
+    border-radius: 50%;
+    color: rgba(121, 121, 121, .8);
+    display: inline-block;
+    height: 30px;
+    line-height: 27px;
+    border: 2px solid rgba(121, 121, 121, .5);
+    text-align: center;
+    width: 30px
+}
+
 .col-lg-4{
-	margin-right : 5%;
+	width : 25%;
+	margin-right : auto;
+}
+
+
+
+.social{
+	margin : 5%;
+	text-align : center;
+}
+
+.social a:hover {
+    color: #797979;
+    border: 2px solid #797979
+}
+
+.NMM{
+	text-align:center;
+}
+
+.col-4{
+	margin:auto;
 }
 
 .social-links li a:hover {
     color: #797979;
     border: 2px solid #797979
 }
+
+.thumb-lg .member-thumb .mx-auto{
+	margin-left : 10%;
+}
+	
 .thumb-lg {
     height: 88px;
     width: 88px;
 }
 .img-thumbnail {
+	margin-left :155%;
     padding: .25rem;
     background-color: #fff;
     border: 1px solid #dee2e6;
@@ -53,3 +93,12 @@ h4 {
     line-height: 22px;
     font-size: 18px;
 }
+
+
+.btn {
+	padding : 2%;
+    margin-left: 39%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
