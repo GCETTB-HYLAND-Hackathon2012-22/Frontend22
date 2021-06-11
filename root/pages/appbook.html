@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Book Appointment</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
+	
+	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    	<link rel="stylesheet" type="text/css" href="./../css/oxbook.css">
+    </head>
+    <body>
+    
+    	<div class="header">
+    		<h2 style="text-align: center;"><b>Book Appointment</b></h2>
+    	</div>
+		
+    	<form action="" method="POST">
+    		<div class="input-group">
+    			<label for="firstame"><b>First Name : </b></label>
+    			<input type="text" name="firstame" >
+    		</div>
+			
+			<div class="input-group">
+    			<label for="lastame"><b>Last Name : </b></label>
+    			<input type="text" name="lastame" >
+    		</div>
+			
+    		<div class="input-group">
+    			<label for="age"><b>Age : </b></label>
+    			<input type="number" name="age" >
+			</div>
+			
+			<div class="hz">
+				<label for="gender"><b>Gender :  </b></label>
+				<div class="opt">
+			    <input type="radio" id="male" name="gender" value="male">
+				<label for="male">Male</label>
+				</div>
+				<div class="opt">
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Female</label>
+				</div>
+				<div class="opt">
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Other</label></div><br>
+			</div>
+			
+			<div class="input-group">
+    			<label for="mobile"><b>Mobile No : </b></label>
+				<input type="number" name="mobile" >
+			</div>
+			
+			<div class="input-group">
+    			<label for="med"><b>Problems  : </b></label>
+    			<input type="text" name="med" >
+    		</div>
+				
+			
+			<div class="input-group">
+			<label for="start">Appointment date :</label>
+<input type="date" id="start" name="date"
+       value=""
+       min="2021-06-11" max="2021-07-01">
+		</div>
+			
+				
+			<div class="form-group">
+				<label for="xray-report"><b>Prescription:</b></label>
+				<input type="file" class="report" id="xray-report">
+			</div>
+			
+			<div class="input-group">
+    			<label for="quantity"><b>Department : </b></label>
+    			<select id="quantity" name="quantity">
+					<option value=1>E.N.T Specialist</option>
+					<option value=2>General Physician</option>
+					<option value=3>Cardiologist</option>
+					<option value=4>Neurologist</option>
+					<option value=5>Child Specialist</option>
+					<option value=6>Orthopaedic</option>
+					<option value=7>Dentist</option>
+					<option value=8>Gynecologists</option>
+					<option value=9>Psychiatrists</option>
+					<option value=10>Oncologist</option>
+				</select>
+			</div>
+			
+			
+
+			
+    		<div class="input-group">
+				<button class="btn" type="submit" name="log_user"><b>Book Now</b></button>
+			</div>
+
+    	</form>
+
+    </body>
+	
+    </html>
