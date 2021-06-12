@@ -81,7 +81,7 @@ include("index.php");
 					<div class="container3">
 					<div style="text-align:center;">
                     <?php if(isset($_SESSION['user_name'])): ?>
-					<a href="profile.html" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
+					<a href="./profile.html" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
 					<button onclick="" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
                     <?php endif ?>
 					</div>
@@ -100,7 +100,7 @@ include("index.php");
 							<ul class="srv-show">
 					<li><a href="./appointment.html">Book an Appointment With Doctor</a></li>
 					<li><a href="./test.php">Predict Disease</li>
-					<li><a href="./oxygen.html">Book Oxygen</a></li>
+					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
 					<li><a href="./medicine.html">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
