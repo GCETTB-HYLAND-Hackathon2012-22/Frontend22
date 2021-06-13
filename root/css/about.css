@@ -1,0 +1,41 @@
+.--container {
+  height: 50vh;
+  width: 70vw;
+  background-color: lightgray;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+  flex-direction: column;
+  margin: 15%;
+}
+
+#--text {
+  border-radius: 20px;
+  padding: 5px;
+  height: 10em;
+  border: none;
+  box-shadow: 0.5px 2px #888888;
+}
+.--btn {
+  border-radius: 20px;
+  color: white;
+  background-color: dodgerblue;
+  height: 4em;
+  width: 8em;
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+.--btn:hover {
+  transform: scale(1.05);
+}
+
+
+.--input {
+  border-radius: 10px;
+  border: none;
+  height: 2em;
+  padding: 2px;
+  box-shadow: 0.5px 2px #888888;
+}
