@@ -1,3 +1,6 @@
+<?php
+include('resultsmed.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -111,9 +114,11 @@
 		<div class="row">
 		  <div class="column">
 			<div class="card">
-				<h1>Store 1</h1>
-				<h2>Address 1</h2>
-				<h2>Contact 1</h2><br>
+                <?php
+				echo "<h1>Store: $store_name1</h1>
+				<h2>Address: $store_add1</h2>
+				<h2>Contact: $store_contact1</h2><br>";
+                ?>
 				<button class="Button" onclick="window.open('./medbook.php')" id="oxButton1" class="btn request-callback">Order Now</button>
 			</div>
 		  </div>
