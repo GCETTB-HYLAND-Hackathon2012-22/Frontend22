@@ -84,7 +84,7 @@ include('results2.php');
 					<li><a href="./test.php">Predict Disease</li>
 					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
-					<li><a href="./medicine.html">Order Medicine</a></li>
+					<li><a href="./medicine.php">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
 				</ul>
 			</li>

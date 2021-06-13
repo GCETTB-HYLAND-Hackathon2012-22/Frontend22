@@ -75,7 +75,7 @@ include("index.php");
 					<div class="container3">
 					<div style="text-align:center;">
                     <?php if(isset($_SESSION['user_name'])): ?>
-					<a href="./profile.php" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
+					<a href="./profile.php" style="color : yellow;text-decoration: none;"><?php echo $name; ?></a><br>
 					<?php endif ?>
 					<button type="submit" onclick="window.open('./../index.html','_self')" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
                     
@@ -97,7 +97,7 @@ include("index.php");
 					<li><a href="./test.php">Predict Disease</li>
 					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
-					<li><a href="./medicine.html">Order Medicine</a></li>
+					<li><a href="./medicine.php">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
 							</ul>
 						</li>
