@@ -1,3 +1,7 @@
+<?php
+// include('resultsmed.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -78,7 +82,81 @@
     	
 // if($httpcode==200){
 // 			echo("<script>location.href = "."'index2.php';</script>");
-// 		}; ?>
+
+			if(isset($_POST['log_user'])){
+				$url = "https://gcettbiaans22.herokuapp.com/api/order/medicine";
+		
+		 
+		
+		$curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_POST, true);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		
+		 
+		
+		$headers = array(
+		   "Accept: application/json",
+		   "Content-Type: application/json",
+		);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+		
+		$user_id=$_SESSION['user_name'];
+		$date=date("Y-m-d");
+		$store_id1=$_SESSION['medstoreid1'];
+        $store_prod1=$_SESSION['medstoreprodid1'];
+		// $store_id=$_SESSION['storeid'];
+		// $prod_price=$_SESSION['prodprice'];
+		// $prod_id=$_SESSION['prodidid'];
+		// $date=date("Y-m-d");
+		// $quant=$_REQUEST['quantity'];
+		// $address=$_REQUEST['address'].", PIN = ".$_REQUEST['pin'];
+		// echo $user_id."<br>".$store_id."<br>".$prod_price."<br>".$date."<br>".$quant."<br>".$address;
+		$data = <<<DATA
+		{
+			"user_id": "$user_id;",
+  "store_id": "$store_id1",
+  "product_id": "$store_prod1",
+  "date_of_purchase": "$date";
+		}
+DATA;
+// "user_id": "string",
+// "store_id": "string",
+// "product_id": "string",
+// "date_of_purchase": "2021-06-13",
+// "bill_id": "string"
+
+		 
+		
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		
+		 
+		
+		//for debug only!
+		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+		
+		 
+		
+		$resp = curl_exec($curl);
+		$httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+		curl_close($curl);
+		// echo $httpcode;
+		if($httpcode==200){
+			echo "<script>alert('Oxygen booked successfully');</script>";
+			echo("<script>location.href = "."'index2.php';</script>");
+		}
+		else{
+			echo "<script>alert('Your order placing is failed. Please try again');</script>";
+		}
+		// var_dump($resp);
+		// $obj=json_decode($resp);
+		// $mx=$obj->;
+		 
+		
+			}
+			
+ ?>
 
     </body>
 	
