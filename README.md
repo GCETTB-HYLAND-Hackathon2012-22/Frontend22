@@ -64,4 +64,4 @@ Unlicensed
 - [Aritra Mondal](@Aritra-Mondal)
 - [Arpan Mahanty](@Edumate696)
 - [Raktim Das](@raktimdas2238)
-- [Soumyajit Nandi](@soumyajitnandi1)
+- [Soumyajit Nandi](https://github.com/soumyajitnandi1)
