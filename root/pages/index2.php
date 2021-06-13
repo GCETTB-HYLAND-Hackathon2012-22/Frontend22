@@ -81,7 +81,7 @@ include("index.php");
 					<div class="container3">
 					<div style="text-align:center;">
                     <?php if(isset($_SESSION['user_name'])): ?>
-					<a href="./profile.html" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
+					<a href="./profile.php" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
 					<button onclick="" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
                     <?php endif ?>
 					</div>
