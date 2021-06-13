@@ -59,8 +59,8 @@ session_start();
 				</div>
 				
 					<div class="container2">
-					<input type="text" class="searchTerm" placeholder="What are you looking?">
-					<button type="submit" class="searchButton">
+					<input type="search" id="search" onchange="openPage()" class="searchTerm" placeholder="What are you looking?">
+					<button type="submit" onclick="openPage()" class="searchButton">
 						<i class="fa fa-search"></i>
 					</button>
 					</div>
@@ -77,9 +77,9 @@ session_start();
 							<span class="fas fa-caret-down"></span>
 						</a>
 							<ul class="srv-show">
-					<li><a href="./appointment.html">Book an Appointment With Doctor</a></li>
+					<li><a href="./location3.php">Book an Appointment With Doctor</a></li>
 					<li><a href="./test.php">Predict Disease</li>
-					<li><a href="./#">Book Oxygen</a></li>
+					<li><a href="#">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
 					<li><a href="./medicine.html">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
@@ -226,6 +226,7 @@ session_start();
 	<script src="./../js/jquery-3.5.1.js"></script>
 	<script src="./../js/preloader.js"></script>
 	<script src="./../js/menu.js"></script>
+	<script src="./../js/srch.js"></script>
 	
 	<!-- _____________________JS_____________________ -->
 	

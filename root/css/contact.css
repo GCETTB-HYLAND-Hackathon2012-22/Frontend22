@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+.card-container {
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 10px 20px -10px rgb(255, 255, 255);
+  color: #000000;
+  padding-top: 30px;
+  position: relative;
+  width: 24%;
+  height: 40%;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px 10px #e4e1e1;
+  padding-bottom: 10px;
+}
+
+.card-container .round {
+  /* border: 1px solid #03bfcb; */
+  box-shadow: 0px 10px 20px -10px rgb(136, 133, 133);
+  border-radius: 40px;
+  padding: 7px;
+}
+
+button.primary {
+  background-color: #ff580a;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+  box-shadow: 0 0 20px 10px #bdbaba;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+button.primary:hover {
+  background-color: #c76132;
+  transform: scale(1.05);
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.icon {
+  border: none;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: 8px;
+  box-shadow: 0 0 20px 10px #bdbaba;
+  transition: all 0.5s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+}
+.logo {
+  height: 30px;
+  width: 30px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.round {
+  height: 150px;
+  width: 160px;
+  float: left;
+  margin-left: 5px;
+}
+
+.main-container {
+	margin-top : 100px;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  padding: 5em;
+  row-gap: 10px;
+  justify-content: center;
+}
+a {
+  color: whitesmoke;
+}

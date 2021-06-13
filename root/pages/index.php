@@ -33,8 +33,15 @@ curl_close($curl);
 $obj=json_decode($resp);
 $username=$obj->user_id;
 $name=$obj->first_name." ".$obj->last_name;
+$usermail=$obj->email_id;
+$userbirth=$obj->dob;
+$userpin=$obj->pin;
+$usercon=$obj->contact_no;
 // echo "Welcome ". $name;
 $_SESSION['user_name']=$name;
- 
-
+$_SESSION['user_id']=$username;
+$_SESSION['user_email']=$usermail;
+$_SESSION['user_DOB']=$userbirth;
+$_SESSION['user_pin']=$userpin;
+$_SESSION['user_contact']=$usercon;
 ?>

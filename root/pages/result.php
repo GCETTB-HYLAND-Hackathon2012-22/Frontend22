@@ -16,25 +16,8 @@ session_start();
     <link rel="stylesheet" href="./../css/pgbar.css">
     <title>COVID possibility result</title>
   </head>
-  <body style='background-color: 
-  
-  <?php
-$t =round($_SESSION['res']*100,2);
-$bac=$_SESSION['bacteria'];
-$cov=$_SESSION['covid'];
-$vir=$_SESSION['viral'];
-if ($t < 26) {
-  echo "#0af531";
-} elseif ($t < 51) {
-  echo "#f1f50a";
-} elseif ($t < 76) {
-    echo "#f5930a";
-} else {
-  echo "#f5450a";
-}
-
-echo "'>";
-?> <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <body style='background-color:#c603fc'>
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <a class="navbar-brand" href="#">Detector</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -42,7 +25,7 @@ echo "'>";
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="https://soumyajitnandi.000webhostapp.com/">Back to Home</a>
+          <a class="nav-link" href="https://soumyajitnandi.000webhostapp.com/pages/index2.php">Back to Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
@@ -53,13 +36,16 @@ echo "'>";
           </form>
   </nav>
         <div class="container"><u>
-            <h2 class="text-center mt-3">COVID-19 Possibility Detector Result</h2>
+            <h2 class="text-center mt-3">Disease Possibility Detector Result</h2>
         </u>
         </div>
         <?php
         
         $patient=$_SESSION['name'];
         $result=$_SESSION['res'];
+        $bac=$_SESSION['bacteria'];
+        $cov=$_SESSION['covid'];
+        $vir=$_SESSION['viral'];
         $t =round($result*100,2);
         $bg = "";
         if ($t < 26) {
@@ -72,12 +58,17 @@ echo "'>";
           $bg = "#f5450a";
         }
         
+		
+		$covP=$t;
+		
+		$virP=(100-$covP)/3;
+		$bacP=100-$t-$vir;
         
         
-            echo "<p><h3 style='text-align: center;margin-top: 100px;'>".$patient."'s covid possibility is ".round($result*100,2)."<br> %</h3>
+            echo "<p><h3 style='text-align: center;margin-top: 100px;'>".$patient."'s covid possibility is ".round($result*100,2)."%</h3>
             
         </p>
-    Bacteria Pneumonia= $bac<br>Covid= $cov <br>Viral Pneumonia= $vir
+  
         
         <div class='skill-bars' style='margin : auto'>
       <div class='bar'>
@@ -89,11 +80,43 @@ echo "'>";
           <span style='width :".$t."%;background:".$bg."'></span>
         </div>
       </div>
-	</div>
+	</div>";
         
-        
-        "
+		if($t>30){
+			echo "<div id='piechart' style='margin-left:32%;margin-top:20px;'></div>";
+		    
+		};
     
        ?> 
+	   
+	   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      // Load google charts
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Draw the chart and set the chart values
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Disease", "Probablity"],
+          ["Bacterial Pneumonia", <?php echo $bacP; ?>],
+          ["Covid 19", <?php echo $covP; ?>],
+          ["Viral Pneumonia", <?php echo $virP; ?>],
+        ]);
+
+        // Optional; add a title and set the width and height of the chart
+        var options = { title: "Composite Probablity Result", width: 550, height: 400 };
+
+        // Display the chart inside the <div> element with id="piechart"
+        var chart = new google.visualization.PieChart(
+          document.getElementById("piechart")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+	   
+	   
+	   
       </body>
       </html>

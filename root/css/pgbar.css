@@ -5,6 +5,7 @@
   background: #6665ee;
 }
 .skill-bars {
+    margin-bottom : 10px;
   padding: 25px 30px;
   width: 600px;
   background: #fff;
@@ -54,7 +55,7 @@
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: left;
-  background: #6665ee;
+
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 

@@ -82,7 +82,7 @@ include('results2.php');
 				<ul class="srv-show">
 					<li><a href="./location3.php">Book an Appointment With Doctor</a></li>
 					<li><a href="./test.php">Predict Disease</li>
-					<li><a href="./oxygen.php">Book Oxygen</a></li>
+					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
 					<li><a href="./medicine.html">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>

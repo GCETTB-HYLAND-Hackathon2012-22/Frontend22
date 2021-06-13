@@ -13,9 +13,11 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 	<link rel="stylesheet" href="./../css/preloader.css">
 	<link rel="stylesheet" href="./../css/menu.css">
 	<link rel="stylesheet" href="./../css/style.css">
+	<link rel="stylesheet" href="./../css/chat.css">
 
 </head>
 
@@ -55,8 +57,8 @@
 				</div>
 				
 					<div class="container2">
-					<input type="text" class="searchTerm" placeholder="What are you looking?">
-					<button type="submit" class="searchButton">
+					<input type="search" id="search" onchange="openPage()" class="searchTerm" placeholder="What are you looking?">
+					<button type="submit" onclick="openPage()" class="searchButton">
 						<i class="fa fa-search"></i>
 					</button>
 					</div>
@@ -103,10 +105,36 @@
 
 	<!-- _____________________CONTENT_____________________ -->
 	
-	<div class="content">
-      <div class="title">Lets Socialise</div>
-	  <p>Connect with people from far and  beyond</p>
-	</div>
+	
+	
+	
+	
+	<div class="container222">
+      <div class="box-one">
+        <h2>Hi! I am your chatbot. how can I help you?</h2>
+      </div>
+      <div class="box-two" >
+          <div class= 'user'><p>Kindly write your Query below.</p></div>
+          <div class="bot"><p>Hello.</p>
+          </div>
+          
+          
+      </div>
+      <div class="box-three">
+        <input id="text" type="text" class="inputForm" />  <button id="btn" type="submit" class="btn">
+          <span class="material-icons"> send </span>
+        </button>
+      </div>
+    </div>
+    <script>
+        document.querySelector('#btn').addEventListener('click', function () {
+            let val = document.querySelector('.inputForm').value;
+            let div = document.createElement('div');
+            div.className = 'user';
+            div.innerHTML = `<p>${val}</p>`;
+        });
+        
+    </script>
 
 		
 	<!-- _____________________CONTENT_____________________ -->
@@ -141,7 +169,7 @@
 	<script src="./../js/jquery-3.5.1.js"></script>
 	<script src="./../js/preloader.js"></script>
 	<script src="./../js/menu.js"></script>
-	
+	<script src="./../js/srch.js"></script>
 	
 	<!-- _____________________JS_____________________ -->
 	

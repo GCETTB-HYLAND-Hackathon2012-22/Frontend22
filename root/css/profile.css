@@ -119,6 +119,11 @@ button:hover, a:hover {
 	text-transform : capitalize;
 }
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .cc2 .about-tabs .tab-item:hover:not(.active) {
 	opacity : 0.6;
 }
@@ -168,6 +173,7 @@ button:hover, a:hover {
 .cc2 .phist {
 	padding-bottom : 80px; 
 }
+
 
 .st-col {
 	padding:40px;

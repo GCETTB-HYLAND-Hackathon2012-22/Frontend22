@@ -77,7 +77,7 @@ session_start();
 					<div class="container3">
 					<div style="text-align:center;">
                     <?php if(isset($_SESSION['user_name'])): ?>
-					<a href="profile.php" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
+					<a href="#" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
 					
                     <?php endif ?>
 					</div>
@@ -94,9 +94,9 @@ session_start();
 							<span class="fas fa-caret-down"></span>
 						</a>
 							<ul class="srv-show">
-					<li><a href="./appointment.html">Book an Appointment With Doctor</a></li>
+					<li><a href="./location3.php">Book an Appointment With Doctor</a></li>
 					<li><a href="./test.php">Predict Disease</li>
-					<li><a href="./oxygen.html">Book Oxygen</a></li>
+					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
 					<li><a href="./medicine.html">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
@@ -138,7 +138,7 @@ session_start();
 	  <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="John" style="width:50%;height:50%;margin-top:8%;">
 	   
 	 <h1><?php  echo $_SESSION['user_name']; ?></h1>
-	  <p><button>Log Out</button></p>
+	  <p><button onclick="window.open('./../index.html','_self')">Log Out</button></p>
 	</div>
 	
 
@@ -157,10 +157,10 @@ session_start();
 		</div>
 	</div>
 	
-	<div class="st-row">
+	<div class="st-row" >
 	<!--              skill-item ==> aboutme  -->
-		<div class="aboutme tab-content active">
-			<div class="st-row2">
+		<div class="aboutme tab-content active"   >
+			<div class="st-row2" ">
 			<!--          skill-item ==> ids  -->
 				
 				<div class="st-col">
@@ -168,7 +168,7 @@ session_start();
 				</div>
 				
 				<div class="st-col2">
-					Firstname Lastname 
+					<?php  echo $_SESSION['user_name']; ?> 
 				</div>
 			</div>
 			
@@ -180,7 +180,7 @@ session_start();
 				</div>
 				
 				<div class="st-col2">
-					Firstname@Lastname 
+					<?php  echo $_SESSION['user_id']; ?> 
 				</div>
 			</div>
 			
@@ -192,8 +192,8 @@ session_start();
 					EMAIL ID  : 
 				</div>
 				
-				<div class="st-col2">
-					Firstname.Lastname@xyz.com 
+				<div class="st-col2" >
+					<?php  echo $_SESSION['user_email']; ?>
 				</div>
 			</div>
 			
@@ -206,7 +206,7 @@ session_start();
 				</div>
 				
 				<div class="st-col2">
-					9800XXXXXX
+					<?php  echo $_SESSION['user_contact']; ?>
 				</div>
 			</div>
 			
@@ -219,11 +219,11 @@ session_start();
 				</div>
 				
 				<div class="st-col2">
-					DD-MM-YYYY
+					<?php  echo $_SESSION['user_DOB']; ?>
 				</div>
 			</div>
 			
-			<div class="st-row2">
+			<div class="st-row2" >
 			<!--          skill-item ==> ids  -->
 				
 				<div class="st-col">
@@ -231,8 +231,20 @@ session_start();
 				</div>
 				
 				<div class="st-col2">
-					700700
+					<?php  echo $_SESSION['user_pin']; ?>
 				</div>
+			</div>
+			
+			<div class="st-row2" >
+			<!--          skill-item ==> ids  -->
+				<div class="st-col" style="background-color:#87ffd9">
+					 
+				</div>
+				
+				<div class="st-col2" style="background-color:#87ffd9;border:none;">
+					
+				</div>
+				
 			</div>
 			
 		</div>
@@ -266,40 +278,19 @@ session_start();
 			<div class="st-row2">
 
 				<div class="st-col2">
-					Order No. 1
+					Order No. #M345
 				</div>
 				
 				<div class="st-col2">
-					Order Date 1
+					13-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Order Status 1
+					Booked
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Details 1</a>
-				</div>
-				
-			</div>
-			
-			
-			<div class="st-row2">
-
-				<div class="st-col2">
-					Order No. 2
-				</div>
-				
-				<div class="st-col2">
-					Order Date 2
-				</div>
-				
-				<div class="st-col2">
-					Order Status 2
-				</div>
-				
-				<div class="st-col2">
-					<a class="pp" href="#">Details 2</a>
+					<a class="pp" href="#">Details</a>
 				</div>
 				
 			</div>
@@ -308,40 +299,19 @@ session_start();
 			<div class="st-row2">
 
 				<div class="st-col2">
-					Order No. 3
+					Order No. #O280
 				</div>
 				
 				<div class="st-col2">
-					Order Date 3
+					13-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Order Status 3
+					Booked
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Details 3</a>
-				</div>
-				
-			</div>
-			
-			
-			<div class="st-row2">
-
-				<div class="st-col2">
-					Order No. 4
-				</div>
-				
-				<div class="st-col2">
-					Order Date 4
-				</div>
-				
-				<div class="st-col2">
-					Order Status 4
-				</div>
-				
-				<div class="st-col2">
-					<a class="pp" href="#">Details 4</a>
+					<a class="pp" href="#">Details</a>
 				</div>
 				
 			</div>
@@ -350,19 +320,61 @@ session_start();
 			<div class="st-row2">
 
 				<div class="st-col2">
-					Order No. 5
+					#M325	
 				</div>
 				
 				<div class="st-col2">
-					Order Date 5
+					11-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Order Status 5
+					Shipped
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Details 5</a>
+					<a class="pp" href="#">Details</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="st-row2">
+
+				<div class="st-col2">
+					Order No. #O250
+				</div>
+				
+				<div class="st-col2">
+					10-06-2021
+				</div>
+				
+				<div class="st-col2">
+					Delivered
+				</div>
+				
+				<div class="st-col2">
+					<a class="pp" href="#">Details</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class="st-row2">
+
+				<div class="st-col2">
+					Order No. #M300
+				</div>
+				
+				<div class="st-col2">
+					25-04-2021
+				</div>
+				
+				<div class="st-col2">
+					Delivered
+				</div>
+				
+				<div class="st-col2">
+					<a class="pp" href="#">Details</a>
 				</div>
 				
 			</div>
@@ -375,7 +387,7 @@ session_start();
 	
 	<div class="st-row">
 	<!--              experience ==> phist  -->
-		<div class="ahist tab-content ">
+		<div class="ahist tab-content " style="padding-bottom: 80px;">
 			<div class="st-row2">
 			<!--          skill-item ==> ids  -->
 				
@@ -405,23 +417,24 @@ session_start();
 			<!--          skill-item ==> ids  -->
 				
 				<div class="st-col2">
-					Appointment No. 1
+					Appointment No. #1233
 				</div>
 				
 				<div class="st-col2">
-					Appointment Date 1
+					15-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Doctor Name 1
+					Julie L. Arsenault
 				</div>
 				
 				<div class="st-col2">
-					Appointment Status 1
+					Booked
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Prescription 1</a>
+					<a class="pp" style="pointer-events: none;
+  cursor: default;color:grey;border:none;" href="#">Prescription</a>
 				</div>
 				
 			</div>
@@ -431,23 +444,24 @@ session_start();
 			<!--          skill-item ==> ids  -->
 				
 				<div class="st-col2">
-					Appointment No. 2
+					Appointment No. #1232
 				</div>
 				
 				<div class="st-col2">
-					Appointment Date 2
+					13-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Doctor Name 2
+					SOUMYAJIT NANDI
 				</div>
 				
 				<div class="st-col2">
-					Appointment Status 2
+				    Booked
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Prescription 2</a>
+					<a class="pp" href="#"  style="pointer-events: none;
+  cursor: default;color:grey;border:none;">Prescription</a>
 				</div>
 				
 			</div>
@@ -457,23 +471,23 @@ session_start();
 			<!--          skill-item ==> ids  -->
 				
 				<div class="st-col2">
-					Appointment No. 3
+					Appointment No. #1131
 				</div>
 				
 				<div class="st-col2">
-					Appointment Date 3
+					10-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Doctor Name 3
+					Mark K. Horne
 				</div>
 				
 				<div class="st-col2">
-					Appointment Status 3
+					Completed
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Prescription 3</a>
+					<a class="pp" href="./../data/Prescription_1131.pdf">Prescription</a>
 				</div>
 				
 			</div>
@@ -483,105 +497,28 @@ session_start();
 			<!--          skill-item ==> ids  -->
 				
 				<div class="st-col2">
-					Appointment No. 4
+					Appointment No. #830
 				</div>
 				
 				<div class="st-col2">
-					Appointment Date 4
+					01-06-2021
 				</div>
 				
 				<div class="st-col2">
-					Doctor Name 4
+					Christopher Gallardo
 				</div>
 				
 				<div class="st-col2">
-					Appointment Status 4
+					Completed
 				</div>
 				
 				<div class="st-col2">
-					<a class="pp" href="#">Prescription 4</a>
+					<a class="pp" href="./../data/Prescription_830.pdf">Prescription</a>
 				</div>
 				
 			</div>
 			
 			
-			<div class="st-row2">
-			<!--          skill-item ==> ids  -->
-				
-				<div class="st-col2">
-					Appointment No. 5
-				</div>
-				
-				<div class="st-col2">
-					Appointment Date 5
-				</div>
-				
-				<div class="st-col2">
-					Doctor Name 5
-				</div>
-				
-				<div class="st-col2">
-					Appointment Status 5
-				</div>
-				
-				<div class="st-col2">
-					<a class="pp" href="#">Prescription 5</a>
-				</div>
-				
-			</div>
-			
-			
-			
-			<div class="st-row2">
-			<!--          skill-item ==> ids  -->
-				
-				<div class="st-col2">
-					Appointment No. 6
-				</div>
-				
-				<div class="st-col2">
-					Appointment Date 6
-				</div>
-				
-				<div class="st-col2">
-					Doctor Name 6
-				</div>
-				
-				<div class="st-col2">
-					Appointment Status 6
-				</div>
-				
-				<div class="st-col2">
-					<a class="pp" href="#">Prescription 6</a>
-				</div>
-				
-			</div>
-			
-			
-			<div class="st-row2">
-			<!--          skill-item ==> ids  -->
-				
-				<div class="st-col2">
-					Appointment No. 7
-				</div>
-				
-				<div class="st-col2">
-					Appointment Date 7
-				</div>
-				
-				<div class="st-col2">
-					Doctor Name 7
-				</div>
-				
-				<div class="st-col2">
-					Appointment Status 7
-				</div>
-				
-				<div class="st-col2">
-					<a class="pp" href="#">Prescription 7</a>
-				</div>
-				
-			</div>
 			
 			
 		</div>

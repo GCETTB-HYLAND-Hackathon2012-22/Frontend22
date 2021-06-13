@@ -20,13 +20,13 @@ session_start();
 		</div>
 		<div class="input-group">
 			<label for="password">Password :</label>
-			<input type="password" name="password" requied>
+			<input type="password" name="password" required>
 </div>
 		<div class="input-group">
 		<button class="btn" type="submit" name="log_user">Submit</button>
 </div>
 <label>
-          new user? <strong><a href="registration.php">create your account</a></strong>
+          new user? <strong><a href="reg.php">Create New Account</a></strong>
       </label>
 	</form>
 <?php

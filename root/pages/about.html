@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
 	
-	<!-- CSS -->>
+	<!-- CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -18,6 +18,21 @@
 	<link rel="stylesheet" href="./../css/menu.css">
 	<link rel="stylesheet" href="./../css/style.css">
 	<link rel="stylesheet" href="./../css/oxygen.css">
+	    <style>
+      .container333 {
+        width: 90%;
+        margin: auto;
+        background-color: lightblue;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+		font-size:0.5rem;
+      }
+	  .content .rrrr{
+	  font-size : 25px;
+	  }
+
+    </style>
 
 </head>
 
@@ -57,8 +72,8 @@
 				</div>
 				
 					<div class="container2">
-					<input type="text" class="searchTerm" placeholder="What are you looking?">
-					<button type="submit" class="searchButton">
+					<input type="search" id="search" onchange="openPage()" class="searchTerm" placeholder="What are you looking?">
+					<button type="submit" onclick="openPage()" class="searchButton">
 						<i class="fa fa-search"></i>
 					</button>
 					</div>
@@ -107,10 +122,30 @@
 
 
 
-	<div class="content">
-      <div class="title">About Us</div>
-	  <p>We are a Great Organization</p>
-	</div>
+	<div class="content" style="top: 450px;">
+          <div class="container333">
+		  <div style="inliine-block">
+        <img src="./../data/clg.png" style=" width : 150px; height:150px; top:0;" alt="">
+		</div >
+      <h2 style="font-size : 30px">
+        We are student of GOVERNMENT COLLEGE OF ENGINEERING & TEXTILE
+        TECHNOLOGY, BERHAMPORE, batch(2018-2022).
+      </h2>
+      <p class="rrrr" style="color : #2c14c7">
+        Health is Wealth.So, our application Miracurol 2.0 is a platform to help everyone to be
+        healthy and aware of health condition.
+      </p>
+      <p class="rrrr"   style="color :#c40a74">Our team, GCETTBiaans_22, plan to provide emergency medical service in various fields to all users with a simplified UI.It is under development and we promise to improve our application day by day.</p>
+      <p class="rrrr" style="display : inliine-block;text-align:center; border : 2px solid black;color : #f25900"><b>Team : GCETTBiaans_22</b>	 <br/>
+         Apratim Sarkar<br/>
+         Aritra Mondal<br/>
+         Arpan Mahanty<br/>
+         Raktim Das<br/>
+         Soumyajit Nandi<br/>
+        </p>
+        <p class="rrrr">Go to <a href="https://soumyajitnandi.000webhostapp.com/pages/contact.html">Contact Us</a> page to get more details about us.</p>
+       
+    </div>
 </body>
 
 		
@@ -146,6 +181,7 @@
 	<script src="./../js/jquery-3.5.1.js"></script>
 	<script src="./../js/preloader.js"></script>
 	<script src="./../js/menu.js"></script>
+	<script src="./../js/srch.js"></script>
 	
 	<!-- _____________________JS_____________________ -->
 	

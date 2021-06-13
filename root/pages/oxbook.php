@@ -295,7 +295,7 @@ DATA;
 		// echo $httpcode;
 		if($httpcode==200){
 			echo "<script>alert('Oxygen booked successfully');</script>";
-			echo("<script>location.href = "."'profile.html';</script>");
+			echo("<script>location.href = "."'index2.php';</script>");
 		}
 		else{
 			echo "<script>alert('Your order placing is failed. Please try again');</script>";

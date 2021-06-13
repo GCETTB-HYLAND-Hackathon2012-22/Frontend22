@@ -43,7 +43,7 @@ function pageLoad() {
 }
         </script>
 <?php
-// echo("<script>location.href = "."'results.php';</script>");
+// echo("<script>location.href = "."'results2.php';</script>");
 ?>
 
     </body>

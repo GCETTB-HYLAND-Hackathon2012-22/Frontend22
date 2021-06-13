@@ -66,24 +66,19 @@ include("index.php");
 				</div>
 				
 					<div class="container2">
-					
-					
-					
-					<input type="text" class="searchTerm" placeholder="What are you looking?">
-					<button type="submit" class="searchButton">
+					<input type="search" id="search" onchange="openPage()" class="searchTerm" placeholder="What are you looking?">
+					<button type="submit" onclick="openPage()" class="searchButton">
 						<i class="fa fa-search"></i>
 					</button>
-					
-					
-					
 					</div>
 					
 					<div class="container3">
 					<div style="text-align:center;">
                     <?php if(isset($_SESSION['user_name'])): ?>
 					<a href="./profile.php" style="color : yellow;text-decoration: none;"><?php echo $_SESSION['user_name']; ?></a><br>
-					<button onclick="" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
-                    <?php endif ?>
+					<?php endif ?>
+					<button type="submit" onclick="window.open('./../index.html','_self')" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
+                    
 					</div>
 					</div>
 
@@ -98,7 +93,7 @@ include("index.php");
 							<span class="fas fa-caret-down"></span>
 						</a>
 							<ul class="srv-show">
-					<li><a href="./appointment.html">Book an Appointment With Doctor</a></li>
+					<li><a href="./location3.php">Book an Appointment With Doctor</a></li>
 					<li><a href="./test.php">Predict Disease</li>
 					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
@@ -194,6 +189,7 @@ include("index.php");
 	<script src="./../js/preloader.js"></script>
 	<script src="./../js/menu.js"></script>
 	<script src="./../js/login.js"></script>
+	<script src="./../js/srch.js"></script>
 	
 	<!-- _____________________JS_____________________ -->
 	
