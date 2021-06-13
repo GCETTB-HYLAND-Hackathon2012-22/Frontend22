@@ -16,12 +16,19 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
-var_dump($resp);
+// var_dump($resp);
 $obj=json_decode($resp);
 $obj1=$obj[0];
 $store_name1=$obj1->vendor_obj->store_name;
+$store_id1=$obj1->store_id;
+$store_prod1=$obj1->product_id;
 $store_add1=$obj1->vendor_obj->city_or_village_name.", ".$obj1->vendor_obj->district.", ".$obj1->vendor_obj->state."-".$obj1->vendor_obj->user_obj->pin;
 $store_contact1=$obj1->vendor_obj->store_contact_no;
+
+$_SESSION['medstoreid1']=$store_id1;
+$_SESSION['medstoreprodid1']=$store_prod1;
+
+
 // echo $store_name1;
 // echo $store_add1;
 // $_SESSION['store']=$store1;
