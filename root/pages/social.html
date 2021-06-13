@@ -126,13 +126,15 @@
         </button>
       </div>
     </div>
-    <script>
-        document.querySelector('#btn').addEventListener('click', function () {
-            let val = document.querySelector('.inputForm').value;
-            let div = document.createElement('div');
-            div.className = 'user';
-            div.innerHTML = `<p>${val}</p>`;
-        });
+        <script>
+        document.querySelector("#btn").addEventListener("click", function () {
+        let val = document.querySelector(".inputForm").value;
+        let div = document.createElement("div");
+        div.className = "user";
+        div.innerHTML = `<p>${val}</p>`;
+        console.log(div);
+        document.querySelector(".box-two").appendChild(div);
+      });
         
     </script>
 
