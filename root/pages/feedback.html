@@ -108,20 +108,71 @@
 	<div class="content">
       <div class="--container">
       <h1 style="text-align: center">Feedback</h1>
-      <input type="text" class="--input" placeholder="Enter your name here.." />
+      <form action="" method="POST" style="display: contents;">
+      <input type="text" class="--input" placeholder="Enter your name here.." name="user" required />
       <textarea
         id="--text"
-        name=""
+    
         rows="4"
         cols="50"
         placeholder="Enter your feedback..."
-      ></textarea
-      ><a href="#"><input type="submit" class="--btn" /></a>
+        name="mesg"
+      required></textarea
+      ><button type="submit" onclick="openPage()" name="bt" class="--btn">
+						Submit
+					</button>
+      </form>
     </div>
 	</div>
+	<?php
+	if(isset($_POST['bt'])){
+	$url = "https://gcettbiaans22.herokuapp.com/api/feedback";
+
+ 
+
+$curl = curl_init($url);
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+ 
+
+$headers = array(
+   "Accept: application/json",
+   "Content-Type: application/json",
+);
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+$name=$_REQUEST['user'];
+ $msg=$_REQUEST['mesg'];
+
+$data = <<<DATA
+{
+  "name": "$name",
+  "feedback": "$msg"
+}
+DATA;
+
+ 
+
+curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+ 
+
+//for debug only!
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+ $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+$resp = curl_exec($curl);
+curl_close($curl);
+// echo $httpcode;
+echo "<script>alert('Thank you for your valuable feedback');</script>";
+	}
 	
 	
-		
+	?>	
 	<!-- _____________________CONTENT_____________________ -->
 	
 	
