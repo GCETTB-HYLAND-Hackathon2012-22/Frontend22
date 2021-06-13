@@ -61,8 +61,8 @@ include('results2.php');
 				</div>
 				
 					<div class="container2">
-					<input type="text" class="searchTerm" placeholder="What are you looking?">
-					<button type="submit" class="searchButton">
+					<input type="search" id="search" onchange="openPage()" class="searchTerm" placeholder="What are you looking?">
+					<button type="submit" onclick="openPage()" class="searchButton">
 						<i class="fa fa-search"></i>
 					</button>
 					</div>
@@ -562,6 +562,7 @@ include('results2.php');
 	<script src="./../js/jquery-3.5.1.js"></script>
 	<script src="./../js/preloader.js"></script>
 	<script src="./../js/menu.js"></script>
+	<script src="./../js/srch.js"></script>
 	
 	<!-- _____________________JS_____________________ -->
 	
