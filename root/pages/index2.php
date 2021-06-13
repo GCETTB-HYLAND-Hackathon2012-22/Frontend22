@@ -13,6 +13,9 @@ include("index.php");
 	<link rel="shortcut icon" type="image/x-icon" href="./../data/favicon.ico">
 	
 	<!-- CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+	
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./../css/preloader.css">
@@ -97,7 +100,7 @@ include("index.php");
 					<li><a href="./test.php">Predict Disease</li>
 					<li><a href="./location2.php">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
-					<li><a href="./medicine.php">Order Medicine</a></li>
+					<li><a href="./locationmed.php">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
 							</ul>
 						</li>

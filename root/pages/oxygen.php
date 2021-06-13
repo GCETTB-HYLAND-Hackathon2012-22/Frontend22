@@ -81,7 +81,7 @@ session_start();
 					<li><a href="./test.php">Predict Disease</li>
 					<li><a href="#">Book Oxygen</a></li>
 					<li><a href="./vaccine.html">Get Vaccinated</a></li>
-					<li><a href="./medicine.php">Order Medicine</a></li>
+					<li><a href="./locationmed.php">Order Medicine</a></li>
 					<li><a href="./ambulance.html">Call Ambulance</a></li>
 				</ul>
 			</li>
@@ -222,6 +222,7 @@ session_start();
 
 	<!-- _____________________JS_____________________ -->
 	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script src="./../js/jquery-3.5.1.js"></script>
 	<script src="./../js/preloader.js"></script>
