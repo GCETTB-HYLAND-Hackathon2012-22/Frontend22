@@ -21,6 +21,8 @@ include("index.php");
 	<link rel="stylesheet" href="./../css/preloader.css">
 	<link rel="stylesheet" href="./../css/menu.css">
 	<link rel="stylesheet" href="./../css/style.css">
+	<link rel="stylesheet" href="./../css/normalize.css">
+	<link rel="stylesheet" href="./../css/welcome.css">
 	<!--<link rel="stylesheet" href="./css/login.css">-->
 
 </head>
@@ -80,7 +82,7 @@ include("index.php");
                     <?php if(isset($_SESSION['user_name'])): ?>
 					<a href="./profile.php" style="color : yellow;text-decoration: none;"><?php echo $name; ?></a><br>
 					<?php endif ?>
-					<button type="submit" onclick="window.open('./../index.html','_self')" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
+					<button type="submit" onclick="window.open('./../index.php','_self')" style=" padding: 10px; font-size: 15px; color: white; background: blue; border: none; border-radius: 2px;">Log Out</button>
                     
 					</div>
 					</div>
@@ -106,7 +108,7 @@ include("index.php");
 						</li>
 							<li><a href="./social.html">Social</a></li>
 							<li><a href="./contact.html">Contact</a></li>
-							<li><a href="./feedback.html">Feedback</a></li>
+							<li><a href="./feedback.php">Feedback</a></li>
 						</ul>
 					</div>
 					
@@ -143,9 +145,13 @@ include("index.php");
 	
 
 
-	<div class="content">
-      <div class="title">WELCOME</div>
-	</div>
+	<div class="Container2A">
+      <div class="text">
+        <h3>Welcome</h3>
+        <span class="quote">LET'S MAKE YOUR LIFE HAPPIER</span>
+        <h1 class="Heading">Healthy Living</h1>
+      </div>
+    </div>
 
 
 		
@@ -168,7 +174,7 @@ include("index.php");
 		<div class="container">
 		
 			<div class="row jcb">
-			UNDER DEVELOPMENT
+		
 			</div>
 		</div>
 	</footer>

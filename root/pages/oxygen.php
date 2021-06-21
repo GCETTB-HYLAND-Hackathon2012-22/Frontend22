@@ -71,7 +71,7 @@ session_start();
 					<label for="active" class="close"></label>
 					<div class="wrapper">
 						<ul>
-							<li><a href="./../index.html">Home</a></li>
+							<li><a href="./index2.php">Home</a></li>
 							<li><a href="./about.html">About</a></li>
 							<li><a  href="#" class="srv-btn">Services
 							<span class="fas fa-caret-down"></span>
@@ -87,7 +87,7 @@ session_start();
 			</li>
 				<li><a href="./social.html">Social</a></li>
 				<li><a href="./contact.html">Contact</a></li>
-				<li><a href="./feedback.html">Feedback</a></li>
+				<li><a href="./feedback.php">Feedback</a></li>
 			</ul>
 		</div>
 			</div>

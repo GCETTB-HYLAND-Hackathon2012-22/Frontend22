@@ -88,7 +88,7 @@ session_start();
 					<label for="active" class="close"></label>
 					<div class="wrapper">
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="./index2.php">Home</a></li>
 							<li><a href="./about.html">About</a></li>
 							<li><a  href="#" class="srv-btn">Services
 							<span class="fas fa-caret-down"></span>
@@ -104,7 +104,7 @@ session_start();
 						</li>
 							<li><a href="./social.html">Social</a></li>
 							<li><a href="./contact.html">Contact</a></li>
-							<li><a href="./feedback.html">Feedback</a></li>
+							<li><a href="./feedback.php">Feedback</a></li>
 						</ul>
 					</div>
 					
@@ -138,7 +138,7 @@ session_start();
 	  <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="John" style="width:50%;height:50%;margin-top:8%;">
 	   
 	 <h1><?php  echo $_SESSION['user_name']; ?></h1>
-	  <p><button onclick="window.open('./../index.html','_self')">Log Out</button></p>
+	  <p><button onclick="window.open('./../index.php','_self')">Log Out</button></p>
 	</div>
 	
 

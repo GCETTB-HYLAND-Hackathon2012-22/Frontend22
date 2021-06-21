@@ -1,0 +1,38 @@
+      .Container2A {
+        background-image: url("./../data/slider3.jpg");
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+        background-color: black;
+      }
+      body {
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.637);
+      }
+      .text {
+        z-index: 99999;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        background: rgba(218, 214, 214, 0.651);
+        padding: 3rem;
+        border-radius: 20px;
+        margin: 5px;
+      }
+
+      .quote {
+        font-size: 1.5rem;
+        color: rgb(20, 104, 104);
+      }
+      .Heading {
+        font-size: 5rem;
+        margin-top: 10px;
+        color: rgb(120, 161, 116);
+      }
+      h3 {
+        font-size: 2rem;
+      }
